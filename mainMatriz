@@ -1,0 +1,28 @@
+#include <iostream>
+#include <locale.h>
+
+int main(void) {
+	setlocale(LC_ALL, "Portuguese"); // comando utilizado para exibir acentuação gráfica no programa.
+	int matriz[3][3]; // matriz de 3 x 3 elementos.
+	for(int l = 0 ; l < 3; l++){ // comando for para realizar o próximo comando linha por linha.
+		for(int c = 0 ; c < 3 ; c++){ // comando for para realizar o próximo comando coluna por coluna.
+			printf("Digite o %iº valor da %iº linha da matriz.\n", c+1 , l+1);
+			scanf("%i", &matriz[l][c]);
+		}
+	}
+	printf("\nA matriz informada foi:\n");	
+	for(int l = 0  ;l < 3; l++){ 
+			printf( "\n" );
+			for(int c = 0 ; c < 3 ; c++){
+				printf( "%i, " , matriz[l][c]);	//exibe o resultado da matriz informada na tela.
+			}
+		}	
+printf( "\n\nO resultado da multiplicação de cada elemento da matriz por 5 resulta em:\n" );	
+for(int l = 0 ; l < 3 ; l++){
+		printf( "\n" );
+		for(int c = 0 ; c < 3 ; c++){
+			matriz[l][c] = matriz[l][c] * 5; // multiplicador.	
+			printf( "%i, " , matriz[l][c]);	//exibe o resultado da operação na tela.
+		}
+	}
+}
